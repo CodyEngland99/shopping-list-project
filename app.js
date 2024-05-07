@@ -1,3 +1,5 @@
+// ADD FILTER ITEM 
+
 const formSubmit = document
 	.getElementById("item-form")
 	.addEventListener("submit", (e) => {
@@ -47,16 +49,23 @@ const addItem = (item) => {
 	const itemContainer = document.getElementById("item-list");
 
 	const li = document.createElement("li");
-	const button = document.createElement("button");
-	const icon = document.createElement("i");
 
 	li.classList.add("item");
-	icon.classList.add("fa-solid", "fa-xmark", "remove-item");
-	button.classList.add("remove-item", "btn-link", "text-red");
 
 	li.innerText = item;
 
 	itemContainer.appendChild(li);
-	li.appendChild(button);
+	li.appendChild(addBtn());
+};
+
+const addBtn = () => {
+	const button = document.createElement("button");
+	const icon = document.createElement("i");
+
+	icon.classList.add("fa-solid", "fa-xmark", "remove-item");
+	button.classList.add("remove-item", "btn-link", "text-red");
+
 	button.appendChild(icon);
+
+	return button;
 };
