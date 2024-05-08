@@ -124,6 +124,18 @@ header h1 {
 	cursor: pointer;
 }
 
+/* not input field filled  */
+
+.not-filled {
+	border: 2px red solid;
+}
+
+/* display non class  */
+
+.display-none {
+	display: none !important;
+}
+
 @media (max-width: 500px) {
 	.items li {
 		width: 100%;
